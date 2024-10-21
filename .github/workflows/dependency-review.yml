@@ -1,0 +1,9 @@
+name: 'Dependency review'
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  submit:
+    uses: kenshoo/actions/.github/workflows/callable_dependency_review_pr.yml@parallel-multilang
+    secrets: inherit

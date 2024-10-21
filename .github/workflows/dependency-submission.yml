@@ -1,0 +1,11 @@
+name: 'Dependency submission'
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  submit:
+    uses: kenshoo/actions/.github/workflows/callable_dependency_submission_master.yml@parallel-multilang
+    secrets: inherit
